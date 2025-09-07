@@ -15,7 +15,7 @@ void GPIO_Config(void) {
     gpio.GPIO_Mode = GPIO_Mode_Out_PP;
     GPIO_Init(GPIOA, &gpio);
 
-    // Button PA9: Input Pull-Up (khÙng nh?n = 1, nh?n = 0)
+    // Button PA9: Input Pull-Up (kh√¥ng nh?n = 1, nh?n = 0)
     gpio.GPIO_Pin = BUTTON_PIN;
     gpio.GPIO_Mode = GPIO_Mode_IPU;
     GPIO_Init(GPIOA, &gpio);
@@ -32,7 +32,7 @@ int main(void) {
     while (1) {
         uint8_t currentState = GPIO_ReadInputDataBit(GPIOA, BUTTON_PIN);
 
-        // B?t c?nh xu?ng: t? 1 -> 0 (nh?n n˙t)
+        // B?t c?nh xu?ng: t? 1 -> 0 (nh?n n√∫t)
         if (lastState == 1 && currentState == 0) {
             ledState = !ledState;
 
@@ -41,7 +41,7 @@ int main(void) {
             else
                 GPIO_ResetBits(GPIOA, LED_PIN); // T?t LED
 
-            // Debounce ~20ms (thÙ)
+            // Debounce ~20ms (th√¥)
             for (volatile int i = 0; i < 720000; i++);
         }
 
