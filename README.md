@@ -2,8 +2,10 @@
 Bài tập 2: Blinking LED
 
 Demo(video)
+
 task 1:https://youtube.com/shorts/fqeuwbdDrrM?feature=share
-task 2:
+
+task 2:https://youtube.com/shorts/xstzuXXuk-k?feature=share
 
 
 
